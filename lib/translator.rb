@@ -1,7 +1,8 @@
 require "yaml"
 
 def load_library(file_path)
-  file = file.read
+  file = File.read(file_path)
+  
 end
 
 def get_japanese_emoticon
