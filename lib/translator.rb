@@ -4,7 +4,8 @@ def load_library(file_path)
   library = YAML.load_file(file_path)
   output = {"get_meaning" => {}, "get_emoticon" => {}}
   library.each do |meaning, emoticons|
-    output["get_meaning"][emoticons[1]]
+    output["get_meaning"][emoticons[1]] = meaning
+    
   end
   
 end
