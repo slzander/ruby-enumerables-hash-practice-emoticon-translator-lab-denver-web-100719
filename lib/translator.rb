@@ -3,8 +3,8 @@ require "yaml"
 def load_library(file_path)
   library = YAML.load_file(file_path)
   output = {"get_meaning" => {}, "get_emoticon" => {}}
-  library.each do
-    output["get_meaning"][]
+  library.each do |meaning, emoticons|
+    output["get_meaning"][emoticons]
   end
   
 end
