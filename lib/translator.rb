@@ -21,8 +21,8 @@ end
 
 def get_english_meaning(file_path = './lib/emoticons.yml', japanese_emoticon)
   library = load_library(file_path)
-  if 
-    
+  if library["get_emoticon"].include?(japanese_emoticon)
+    library["get_emoticon"][japanese_emoticon]
   else
     "Sorry that emoticon was not foud"
   end
